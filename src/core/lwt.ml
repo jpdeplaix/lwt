@@ -631,7 +631,7 @@ struct
     fun
       (type u)
       (type c)
-      (p : ('a, u, c) promise) ->
+      (p : ('a, u, c) promise) : ('a, underlying, c) promise ->
 
     match p.state with
     | Fulfilled _ -> (p : (_, underlying, _) promise)
